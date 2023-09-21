@@ -62,8 +62,8 @@ namespace DurableHttpMonitor
             var coffeeTimer = new Stopwatch();
             coffeeTimer.Start();
 
-            // orchestrate the work in whatever way you need to. here we do a combo
-            //  of fan-out and 
+            // orchestrate the work in whatever way you need to.
+            // see docs for details
             // https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-code-constraints?tabs=csharp
             var prepTasks = new List<Task<string>>
             {
