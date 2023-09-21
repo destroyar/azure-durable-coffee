@@ -1,0 +1,20 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@baseUrl=http://localhost:7219/api
+
+# replace this with content.instanceId to get the status of your coffee
+@taskId=fac0cce67ac740e29ef55e4a7e9a70ad
+
+# create a new coffee order
+POST {{baseUrl}}/MakeMeSomeCoffee
+Content-Type: application/json
+
+{
+    "beanWeight": 16,
+    "waterWeight": 275
+}
+
+###
+
+# get the status of an order
+GET http://localhost:7219/runtime/webhooks/durabletask/instances/{{taskId}}?taskHub=TestHubName&connection=Storage&code=01g_uPycI6B4E8zn45vkhyX_OZ_2NQmgl23kH4_KCRDyAzFuU1E6Mg==
